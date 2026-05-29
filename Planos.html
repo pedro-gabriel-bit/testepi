@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>planos</title>
+    <link rel="stylesheet" href="css/premium.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body 
+>
+   <header>
+    <img src="fotos/logo_txt.png" alt="Titan Fit">
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
+</header>
+
+<nav id="menu">
+    <div class="close-menu" onclick="toggleMenu()">✖</div>
+
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Plano Premium</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+</nav>
+
+    <main>
+        <div class="card-basico">
+            <h2>Basico</h2>
+            <ul> 
+                <li>Treinos básicos personalizados com base em peso, idade e objetivo</li>
+                <li>Acesso inicial á biblioteca de exercícios</li>
+                <li>Sugestões simples de rotiinas de treino</li>
+                <li>Acesso á loja de suplementos</li>
+            </ul>
+            <button>Iniciar</button>
+        </div>
+        <div class="card-premium">
+            <h2>Premium</h2>
+            <ul>
+                <li>Todos os recursos do plano básico</li>
+                <li>Acompanhamento com personal trainer online</li>
+                <li>Treinos altamente personalizados, considerando limitações e saúde</li>
+                <li>Dietas personalizadas conforme objetivos</li>
+                <li>Prioridade no suporte e acesso antecipado a novos recursos</li>
+            </ul>
+            <button>Iniciar</button>
+        </div>
+    </main>
+
+     <script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+    }
+    
+html {
+  scrollbar-gutter: stable;
+}
+body {
+   background-color: #262626;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* ===================== LOGO ===================== */
+
+/* ===================== TELA PRINCIPAL ===================== */
+.tela_principal img {
+    width: 100%;
+    border-bottom: solid 2px #F26B2B;
+}
+
+/* ===================== QUADRADO ===================== */
+.quadrado {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    padding: 2%;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    color: black;
+    font-size: 20px;
+}
+
+.quadrado button {
+    background-color: #F26B2B;
+    border: none;
+    border-radius: 15%;
+    padding: 3%;
+    font-size: medium;
+    color: #fff;
+}
+
+/* ===================== SEÇÃO APP ===================== */
+.logo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    gap: 200px;
+    padding: 2%;
+}
+
+.imagem {
+    width: 180px;
+    height: 190px;
+    border-radius: 60%;
+    border: 5px solid #6F0CD8;
+}
+
+.baixo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagen {
+    width: 100px;
+}
+
+/* ===================== RESPONSIVO 1024px ===================== */
+@media (max-width: 1024px) {
+    #logo {
+        width: 80px;
+    }
+
+    .quadrado p {
+        font-size: 15px;
+        padding-bottom: 4px;
+    }
+
+    .quadrado button {
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    .logo2 {
+        font-size: medium;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2%;
+    }
+
+    .imagem {
+        width: 150px;
+        height: 160px;
+    }
+
+    .baixo {
+        margin-left: -260px;
+    }
+}
+
+/* ===================== RESPONSIVO TABLET ===================== */
+@media (max-width: 768px) {
+    .tela_principal {
+        display: flex;
+        flex-direction: column;
+        padding: 2px;
+    }
+
+    .tela_principal img {
+        border: none;
+        order: -1;
+    }
+
+    .quadrado {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        position: static;
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .quadrado p {
+        padding-bottom: 8px;
+        text-align: justify;
+    }
+
+    .quadrado button {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+/* ===================== RESPONSIVO 550px ===================== */
+@media (max-width: 550px) {
+    #logo {
+        width: 80px;
+    }
+
+    .tela_principal img {
+        margin-top: 5px;
+        border: none;
+    }
+
+    .quadrado p {
+        font-size: 15px;
+        word-spacing: -2px;
+        margin: 4px;
+    }
+
+    .quadrado button {
+        font-size: 15px;
+        display: block;
+        margin: 0 auto 3px;
+    }
+
+    .logo2 {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        gap: 290px;
+    }
+
+    .imagem {
+        width: 50px;
+        height: 50px;
+        border: 2.5px solid #6F0CD8;
+    }
+
+    .imagen {
+        width: 50px;
+        height: 50px;
+    }
+
+    .baixo p {
+        font-size: 13px;
+    }
+
+    .btn-menu {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+}
+
+/* ===================== RESPONSIVO 425px ===================== */
+@media (max-width: 425px) {
+    #logo {
+        width: 80px;
+    }
+
+    .tela_principal img {
+        margin-top: 5px;
+        border: none;
+    }
+
+    .quadrado p {
+        font-size: 15px;
+        word-spacing: -2px;
+        margin: 4px;
+    }
+
+    .quadrado button {
+        font-size: 15px;
+        display: block;
+        margin: 0 auto 3px;
+    }
+
+    .logo2 {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        gap: 290px;
+    }
+
+    .imagem {
+        width: 50px;
+        height: 50px;
+        border: 2.5px solid #6F0CD8;
+    }
+
+    .imagen {
+        width: 50px;
+        height: 50px;
+    }
+
+    .baixo p {
+        font-size: 13px;
+    }
+
+    .btn-menu {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+}

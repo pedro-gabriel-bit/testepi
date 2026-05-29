@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela inical</title>
+
+    <!-- css -->
+ <link rel="stylesheet" href="css/home.css">
+ <link rel="stylesheet" href="css/menu.css">
+
+    <!-- fontes google -->
+</head>
+<body>
+
+    <!-- TOPO -->
+    <header>
+    <img src="fotos/logo_txt.png" alt="Titan Fit">
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
+</header>
+
+<nav id="menu">
+    <div class="close-menu" onclick="toggleMenu()">✖</div>
+
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="Planos.html">Plano Premium</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+</nav>
+
+    <main>
+        <div class="tela_principal">
+            <div class="quadrado">
+                <p>
+                    Treinar é um compromisso pessoal que fortalece o corpo e a mente, desenvolvendo disciplina, foco e
+                    constância, além de trazer mais energia, saúde e bem-estar. Para tornar esse processo mais eficiente
+                    e motivador, o TitanFit oferece treinos personalizados conforme seus objetivos, nível e rotina,
+                    ajudando você a evoluir com segurança e inteligência.
+                </p>
+                <button>iniciar</button>
+            </div>
+
+            <img 
+                src="fotos/cbum.cortado.png"
+                alt="Homem musculoso posando em academia em frente ao espelho, destacando a definição do tronco e dos braços em uma foto em preto e branco."
+            >
+        </div>
+
+        <section class="logo2">
+            <img 
+                src="fotos/logo.png"
+                alt="Ícone de capacete espartano estilizado nas cores roxo e branco, com detalhes laranja ao fundo."
+                class="imagem"
+            >
+
+            <div class="baixo">
+                <p>Baixe nosso aplicativo</p>
+
+                <img 
+                    src="fotos/android.png"
+                    alt="logo android"
+                    class="imagen"
+                >
+            </div>
+        </section>
+    </main>
+
+  <script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+
+</html>

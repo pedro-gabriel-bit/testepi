@@ -1,0 +1,254 @@
+:root {
+  --bg-modal: #1b1b1b;
+  --overlay: rgba(0, 0, 0, 0.85);
+  --accent: #ff6600;
+  --accent-strong: rgba(255, 102, 0, 0.95);
+  --text-muted: #cfcfcf;
+  --input-bg: #0f0f0f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, "Segoe UI", Arial, sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+/* Overlay do modal */
+#login-overlay,
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--overlay);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 99999;
+  padding: 15px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Caixa do modal */
+.login-modal {
+  width: min(420px, 96%);
+  background-color: var(--bg-modal);
+  border-radius: 28px;
+  padding: 32px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 102, 0, 0.15);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+/* Botão fechar */
+#login-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 100;
+}
+
+#login-close:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* 🔥 LOGO NO TOPO (CORRIGIDA) */
+.logo-topo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 0; /* CORREÇÃO */
+}
+
+.logo-topo img {
+  width: 90px !important;
+  max-height: 110px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* Títulos */
+.login-modal h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.login-modal .subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Formulário */
+.login-modal form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-modal label {
+  display: block;
+  color: #bbb;
+  font-size: 13px;
+  margin-left: 12px;
+  text-align: left;
+}
+
+.login-modal input {
+  width: 100%;
+  padding: 0 22px;
+  height: 50px;
+  border-radius: 999px;
+  border: 2px solid var(--accent-strong);
+  background: var(--input-bg);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+}
+
+.login-modal input::placeholder {
+  color: #9a9a9a;
+}
+
+.login-modal input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 6px 18px rgba(255, 102, 0, 0.12);
+}
+
+/* Botão principal */
+.btn-continuar {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  height: 52px;
+  width: 100%;
+  font-weight: 800;
+  font-size: 17px;
+  cursor: pointer;
+  text-transform: lowercase;
+  margin-top: 8px;
+  box-shadow: 0 8px 20px rgba(255, 102, 0, 0.28);
+}
+
+.btn-continuar:active {
+  transform: scale(0.995);
+}
+
+/* Divisor */
+.divisor {
+  color: #666;
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+/* Botões sociais */
+.btn-social {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 0 20px;
+  transition: background 0.18s, transform 0.06s;
+}
+
+.btn-social:hover {
+  background: rgba(255, 102, 0, 0.08);
+}
+
+.btn-social:active {
+  transform: scale(0.995);
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* Cadastro */
+.cadastro-texto {
+  margin-top: 8px;
+  color: #888;
+  font-size: 13px;
+}
+
+.cadastro-texto a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.cadastro-texto a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 380px) {
+  .login-modal {
+    padding: 24px 16px;
+  }
+
+  .btn-social {
+    font-size: 13px;
+    gap: 8px;
+    height: 46px;
+  }
+
+  .login-modal h1 {
+    font-size: 24px;
+  }
+
+  .logo-topo img {
+    width: 75px;
+    max-height: 90px;
+  }
+}
