@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - Titan Fit</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="topo">
+        <img src="fotos/logo_txt.png" alt="Titan Fit" />
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <nav id="menu">
+            <div class="close-menu" onclick="toggleMenu()">✖</div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servico.html">Serviços</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="planos.html">Plano Premium</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="conteudo-cadastro">
+            <div class="cadastro-box">
+                <h2 class="titulo-cadastro">Cadastro</h2>
+                <p>Crie sua conta</p>
+
+                <form action="/cadastro" method="POST" autocomplete="on">
+
+                    <div class="escolha-professor-aluno">
+                        <button type="button" class="botao-escolha ativo" data-tipo="usuario">Usuario</button>
+                        <button type="button" class="botao-escolha" data-tipo="professor">Professor</button>
+                    </div>
+
+                    <!-- Campo escondido que diz pro backend se é "usuario" ou "professor" -->
+                    <input type="hidden" name="tipo" id="tipoInput" value="usuario">
+
+                    <div class="caixa-cadastro">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+                    </div>
+
+                    <div>
+                        <div id="camposProfessor" style="display: none">
+                            <div class="caixa-cadastro">
+                                <label for="cref">CREF</label>
+                                <input type="text" id="cref" name="cref" placeholder="Digite seu CREF" />
+                            </div>
+
+                            <div class="caixa-cadastro">
+                                <label for="especialidade">Especialidade</label>
+                                <input type="text" id="especialidade" name="especialidade"
+                                    placeholder="Ex: Musculação" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="caixa-cadastro">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+                    </div>
+
+                    <div class="caixa-cadastro">
+                        <label for="senha-cadastro">Senha</label>
+                        <input type="password" id="senha-cadastro" name="senha" placeholder="Digite sua senha"
+                            required />
+                    </div>
+
+                    <button type="submit" class="btn-cadastro">Cadastrar</button>
+                    <p class="ja-tem-conta">Já tem conta?</p>
+                    <a href="login.html" class="link-login">Entrar</a>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="interacao.js"></script>
+</body>
+
+</html>
